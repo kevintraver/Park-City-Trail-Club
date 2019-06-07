@@ -1,0 +1,11 @@
+---
+title: Previous Runs
+---
+
+<h1>Previous Runs</h1>
+
+<% dato.runs.select{|run| run.date < Date.today}.each do |run| %>
+  <div>
+    <%= link_to "#{run.date} - #{run.location.title}", "/runs/#{run.date}.html" %>
+  </div>
+<% end %>

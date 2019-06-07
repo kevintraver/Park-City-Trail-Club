@@ -1,0 +1,9 @@
+<h1><%= run.date %></h1>
+
+<h2>
+  <%= link_to run.location.title, "/locations/#{run.location.slug}.html" %>
+</h2>
+
+<% run.photos.each do |photo| %>
+  <%= image_tag photo.url %>
+<% end %>

@@ -1,0 +1,6 @@
+<h1><%= location.title %></h1>
+
+<% location.routes.each do |route| %>
+  <%= route.distance %> miles
+  <%= route.map.html_safe %>
+<% end %>

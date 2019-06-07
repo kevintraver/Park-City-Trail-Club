@@ -1,0 +1,19 @@
+---
+title: Park City Trail Club
+---
+
+<h1>Next Sunday Run</h1>
+<% run = dato.runs.reverse.detect{|run| run.date > Date.today} %>
+<%= link_to "#{run.date} - #{run.location.title}", "/locations/#{run.location.slug}.html" %>
+
+<h1>Routes</h1>
+
+<% dato.locations.each do |location| %>
+  <div>
+    <%= link_to location.title, "/locations/#{location.slug}.html" %>
+  </div>
+<% end %>
+
+<h3>
+<%= link_to 'Logbook', "/logbook.html" %>
+</h3>
