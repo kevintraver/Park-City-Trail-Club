@@ -53,11 +53,11 @@ activate :dato,
 dato.tap do |dato|
 
   dato.locations.each do |location|
-    proxy "/locations/#{location.slug}.html", "/templates/location.html", locals: { location: location }
+    proxy "/locations/#{location.slug}.html", "/templates/location.html", locals: { location: location }, ignore: true
   end
 
   dato.runs.each do |run|
-    proxy "/runs/#{run.date}.html", "/templates/run.html", locals: { run: run }
+    proxy "/runs/#{run.date}.html", "/templates/run.html", locals: { run: run }, ignore: true
   end
 
 end
