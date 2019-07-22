@@ -1,0 +1,59 @@
+---
+title: Park City Trail Club
+---
+
+<% dato.locations.each do |location| %>
+
+  <div class="mdl-card mdl-shadow--2dp">
+
+    <div class="mdl-card__media">
+      <img class="location-image" src="/images/1FF186FC8C706CE7E6698E76CFFCC4D0.png"  style="width: 100%">
+    </div>
+
+    <div class="mdl-card__title mdl-card--expand">
+      <h2 class="mdl-card__title-text">
+        <%= link_to location.title, "/locations/#{location.slug}.html" %>
+      </h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Aenan convallis.
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    // $(document).ready(function()
+    // {
+    //   inView('.location-image')
+    //     .on('enter', el => {
+    //         var src = $(el).attr("src");
+    //         $(el).attr("src", src.replace(/\.png$/i, ".gif"));
+    //       }, )
+    //     .on('exit', el => {
+    //         var src = $(el).attr("src");
+    //         $(el).attr("src", src.replace(/\.gif$/i, ".png"));
+    //     });
+    //
+    //   inView.offset({ top: 200, bottom: 500 });
+    // });
+
+    $(document).ready(function()
+    {
+      $(".location-image").hover(
+      function()
+      {
+        var src = $(this).attr("src");
+        $(this).attr("src", src.replace(/\.png$/i, ".gif"));
+      },
+      function()
+      {
+        var src = $(this).attr("src");
+        $(this).attr("src", src.replace(/\.gif$/i, ".png"));
+      });
+    });
+
+
+  </script>
+
+<% end %>
