@@ -7,7 +7,11 @@ title: Park City Trail Club
   <div class="mdl-card mdl-shadow--2dp">
 
     <div class="mdl-card__media">
-      <img class="location-image" src="/images/1FF186FC8C706CE7E6698E76CFFCC4D0.png"  style="width: 100%">
+      <img class="route-main-image"
+      src="<%= location.main_image.try(:url) %>"
+      data-main-image="<%= location.main_image.try(:url) %>"
+      data-main-image-animated="<%= location.main_image_animated.try(:url) %>"
+      style="width: 100%">
     </div>
 
     <div class="mdl-card__title mdl-card--expand">
@@ -40,16 +44,18 @@ title: Park City Trail Club
 
     $(document).ready(function()
     {
-      $(".location-image").hover(
+      $(".route-main-image").hover(
       function()
       {
-        var src = $(this).attr("src");
-        $(this).attr("src", src.replace(/\.png$/i, ".gif"));
+        var mainImage = $(this).data('main-image');
+        var mainImageAnimated = $(this).data('main-image-animated');
+        $(this).attr("src", mainImageAnimated);
       },
       function()
       {
-        var src = $(this).attr("src");
-        $(this).attr("src", src.replace(/\.gif$/i, ".png"));
+        var mainImage = $(this).data('main-image');
+        var mainImageAnimated = $(this).data('main-image-animated');
+        $(this).attr("src", mainImage);
       });
     });
 
