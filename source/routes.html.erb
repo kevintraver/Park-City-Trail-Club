@@ -5,8 +5,8 @@ title: Park City Trail Club
 
   <% dato.locations.each do |location| %>
 
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="mdl-card mdl-shadow--2dp">
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--12-col-tablet">
+      <div class="route mdl-shadow--2dp">
 
         <div class="mdl-card__media">
           <img class="route-main-image"
@@ -38,17 +38,18 @@ title: Park City Trail Club
 
     // $(document).ready(function()
     // {
-    //   inView('.location-image')
+    //   inView('.route-main-image')
     //     .on('enter', el => {
-    //         var src = $(el).attr("src");
-    //         $(el).attr("src", src.replace(/\.png$/i, ".gif"));
+    //         var mainImage = $(el).data('main-image');
+    //         var mainImageAnimated = $(el).data('main-image-animated');
+    //         $(el).attr("src", mainImageAnimated);
     //       }, )
     //     .on('exit', el => {
-    //         var src = $(el).attr("src");
-    //         $(el).attr("src", src.replace(/\.gif$/i, ".png"));
+    //       var mainImage = $(el).data('main-image');
+    //       var mainImageAnimated = $(el).data('main-image-animated');
+    //       $(el).attr("src", mainImage);
     //     });
     //
-    //   inView.offset({ top: 200, bottom: 500 });
     // });
 
     $(document).ready(function()
