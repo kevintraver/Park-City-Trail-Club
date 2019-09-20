@@ -2,22 +2,44 @@
 title: Park City Trail Club
 ---
 
-<h1>Next Sunday Run</h1>
-<% run = dato.runs.reverse.detect{|run| run.date >= Date.today} %>
-<% if run %>
-  <%= link_to "#{run.date} - #{run.location.title}", "/locations/#{run.location.slug}.html" if run%>
-<% else %>
-  <div>Coming soon!</div>
-<% end %>
+<section class="mission">
+  <h3 class="mission-title">Our Mission</h3>
+  <p class="mission-statement">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+  
+  <div class="stats-container">
+    <div class="team-stats">
+      <div class="stat-group">
+        <h3 class="number">1000</h3>
+        <span class="stat-desc">Sunday Runs</span>
+      </div>
 
-<h1>Routes</h1>
+      <div class="stat-group">
+        <h3 class="number">1000</h3>
+        <span class="stat-desc">Sunday Runs</span>
+      </div>
 
-<% dato.locations.each do |location| %>
-  <div>
-    <%= link_to location.title, "/locations/#{location.slug}.html" %>
+      <div class="stat-group">
+        <h3 class="number">1000</h3>
+        <span class="stat-desc">Sunday Runs</span>
+      </div>
+
+      <div class="stat-group">
+        <h3 class="number">1000</h3>
+        <span class="stat-desc">Sunday Runs</span>
+      </div>
+    </div>
   </div>
-<% end %>
+</section>
 
-<h3>
-<%= link_to 'Logbook', "/logbook.html" %>
-</h3>
+<section class="community">
+  <h3 class="community-title">Our Community</h3>
+  <p class="community-statement">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+  <div class="community-image-container">
+    <div class="community-image"></div>
+  </div>
+</section>
+
+<section class="landing-page-footer">
+  <div class="social-media"></div>
+  <div class="footers">Home | Upcoming | Local Routes | Gallery</div>
+</section>
