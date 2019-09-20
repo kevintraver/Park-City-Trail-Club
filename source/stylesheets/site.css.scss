@@ -54,7 +54,7 @@
     width: 60%;
     display: flex;
     justify-content: space-between;
-    flex-flow: row-wrap;
+    flex-flow: row wrap;
 
     .stat-groups {
       width: 100px;
@@ -67,7 +67,7 @@
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  padding-bottom: 150px;
+  padding-bottom: 40px;
 
   .community-title {
     padding-top: 25px;
@@ -98,4 +98,44 @@
 
 .landing-page-footer {
   background-color: #EDECE9;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  padding-top: 25px;
+
+  .social-media-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .social-media {
+      display: flex;
+      justify-content: space-between;
+      width: 20%;
+      flex-flow: row wrap;
+      font-size: 25px;
+
+      .material-icons {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .footer-links {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    .nav-link {
+      font-size: 18px;
+      color: #000000;
+    }
+  }
+
+  .footer-bar {
+    height:30px;
+    width: 100%;
+    background-color: #281C01;
+  }
 }
