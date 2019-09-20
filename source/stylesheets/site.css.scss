@@ -10,9 +10,8 @@
   background-size: cover;
 }
 
-.demo-card-square.mdl-card {
-  width: 320px;
-  height: 120;
+.route.mdl-card {
+  width: inherit;
 }
 
 .demo-card-square > .mdl-card__title {
