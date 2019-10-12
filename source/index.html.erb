@@ -2,6 +2,25 @@
 title: Park City Trail Club
 ---
 
+<section class="sunday-run">
+  <h3 class="sunday-run-title">Upcoming Sunday Run</h3>
+  <div class="sunday-run-section">
+    <% run = dato.runs.reverse.detect{|run| run.date >= Date.today} %>
+    <% if run %>
+      <% link_to "/locations/#{run.location.slug}.html" do %>
+        <h4>
+          <%= run.date %>
+          <br>
+          <br>
+          <%= run.location.title %>
+        </h4>
+      <% end %>
+    <% else %>
+      <div>Check back soon! Runs are usually posted by Thursday</div>
+    <% end %>
+  </div>
+</section>
+
 <section class="mission">
   <h3 class="mission-title">Our Mission</h3>
   <p class="mission-statement"><%= dato.main_page.mission %></p>
@@ -31,7 +50,9 @@ title: Park City Trail Club
   <h3 class="community-title">Our Community</h3>
   <p class="community-statement">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
   <div class="community-image-container">
-    <div class="community-image"></div>
+    <div class="community-image">
+      <%= image_tag 'https://www.datocms-assets.com/12570/1570917987-6529979024100582292281591296274434771910656n.jpg' %>
+    </div>
   </div>
 </section>
 

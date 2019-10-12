@@ -22,6 +22,32 @@
 
 
 // HOME PAGE
+
+.sunday-run {
+  top: -25px;
+  justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  padding-bottom: 50px;
+
+  .sunday-run-title {
+    width: 100%;
+    padding-top: 25px;
+  }
+
+  .sunday-run-section {
+    a {
+      color: black;
+    }
+
+    iframe {
+      width: 590px;
+    }
+  }
+
+}
+
 .mission {
   background-color: #EDECE9;
   width: 100%;
@@ -87,10 +113,11 @@
     flex-flow: row wrap;
     padding-top: 50px;
 
-    .community-image {
-      background: url('https://www.datocms-assets.com/12570/1563848891-mvimg20190630112744.png') center / cover;
+    .community-image img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
       width: 75%;
-      height: 500px;
     }
   }
 }
