@@ -48,6 +48,7 @@ page '/*.txt', layout: false
 # end
 
 activate :dato,
+  preview: true,
   live_reload: true,
   token: ENV['DATO_CMS_TOKEN'],
   base_url: 'https://www.parkcitytrailclub.com'
@@ -62,4 +63,11 @@ dato.tap do |dato|
     proxy "/runs/#{run.date}.html", "/templates/run.html", locals: { run: run }, ignore: true
   end
 
+end
+
+helpers do
+  def markdown(text)
+    renderer = Redcarpet::Render::HTML.new
+    Redcarpet::Markdown.new(renderer).render(text)
+  end
 end
