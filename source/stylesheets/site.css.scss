@@ -10,6 +10,19 @@
   width: inherit;
 }
 
+.main-title {
+  color: white;
+  text-decoration: none;
+}
+
+.menu .main-title {
+  color: black;
+}
+
+.menu > .mdl-navigation {
+  padding-top: 0px;
+}
+
 .demo-card-square > .mdl-card__title {
   color: #fff;
   background-size: cover;
@@ -26,6 +39,9 @@
 .route-title {
   padding-left: 25px;
 
+}
+
+.page-content {
 }
 
 .sunday-run {
@@ -63,13 +79,14 @@
   flex-flow: row wrap;
 
   .mission-title {
-    padding-top: 25px;
     font-size: 24px;
     width: 100%;
     text-align: center;
   }
 
   .mission-statement {
+    margin-left: 20px;
+    margin-right: 20px;
     width: 550px;
     text-align: center;
   }
@@ -78,6 +95,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    text-align: center;
     padding-bottom: 50px;
   }
   .team-stats {
@@ -100,7 +118,6 @@
   padding-bottom: 40px;
 
   .community-title {
-    padding-top: 25px;
     font-size: 24px;
     width: 100%;
     text-align: center;
@@ -109,6 +126,8 @@
   .community-statement {
     width: 550px;
     text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .community-image-container {
