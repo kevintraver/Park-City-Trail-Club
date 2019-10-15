@@ -97,16 +97,21 @@
     justify-content: center;
     text-align: center;
     padding-bottom: 50px;
+
+    .stat-group .number {
+      margin-bottom: 10px;
+    }
+
+    .stat-group .stat-desc {
+      margin-bottom: 5px;
+    }
   }
+
   .team-stats {
     width: 60%;
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
-
-    .stat-groups {
-      width: 100px;
-    }
   }
 }
 
