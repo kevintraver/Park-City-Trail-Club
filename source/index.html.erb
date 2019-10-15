@@ -2,8 +2,6 @@
 title: Park City Trail Club
 ---
 
-<%= Time.now %>
-
 <section class="mission">
   <h3 class="mission-title">Our Mission</h3>
   <div class="mission-statement"><%= dato.main_page.mission %></div>
@@ -11,13 +9,14 @@ title: Park City Trail Club
   <div class="stats-container">
     <div class="team-stats mdl-grid">
       <div class="stat-group mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-        <h3 class="number"><%= dato.main_page.number_of_runs %></h3>
+        <h3 class="number number-of-runs">
+        </h3>
         <i class="material-icons">event</i>
         <div class="stat-desc">Sunday Runs</div>
       </div>
 
       <div class="stat-group mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-        <h3 class="number"><%= dato.main_page.number_of_runs %></h3>
+        <h3 class="number"><%= dato.main_page.miles_of_trail %></h3>
         <i class="material-icons">directions_run</i>
         <div class="stat-desc">Miles of Trail</div>
       </div>
@@ -53,3 +52,12 @@ title: Park City Trail Club
 <section class="landing-page-footer">
   Copyright 2019 Park City Trail Club
 </section>
+
+<script>
+  $( document ).ready(function() {
+    var a = moment("2015-03-07");
+    var b = moment();
+    var numRuns = Math.abs(a.diff(b, 'weeks'));
+    $('.number-of-runs').text(numRuns);
+  });
+</script>
