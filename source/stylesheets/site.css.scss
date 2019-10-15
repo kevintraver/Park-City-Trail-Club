@@ -1,3 +1,14 @@
+
+section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
 .route-image {
   background-size: cover;
 }
@@ -36,7 +47,28 @@
 
 .meeting {
 
+  background-color: #EDECE9;
+  display: flex;
   text-align: center;
+  justify-content: center;
+  flex-flow: row wrap;
+
+  .meeting-title {
+    width: 100%;
+  }
+
+  .meeting-location {
+    margin-left: auto;
+    margin-right: auto;
+    width: 66%;
+  }
+
+  .map {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+  }
 
   iframe {
     width: 600px;
@@ -45,16 +77,12 @@
     margin-right: auto;
   }
 
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-
 }
 
 // HOME PAGE
 
 .route-title {
   padding-left: 25px;
-
 }
 
 .page-content {
@@ -66,11 +94,9 @@
   display: flex;
   flex-flow: row wrap;
   text-align: center;
-  padding-bottom: 50px;
 
   .sunday-run-title {
     width: 100%;
-    padding-top: 25px;
   }
 
   .sunday-run-section {
@@ -87,24 +113,12 @@
 
 .mission {
   background-color: #EDECE9;
-  width: 100%;
-  position: relative;
-  top: -25px;
-  display: flex;
+  text-align: center;
   justify-content: center;
   flex-flow: row wrap;
 
   .mission-title {
-    font-size: 24px;
     width: 100%;
-    text-align: center;
-  }
-
-  .mission-statement {
-    margin-left: 20px;
-    margin-right: 20px;
-    width: 550px;
-    text-align: center;
   }
 
   .stats-container {
@@ -112,7 +126,6 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    padding-bottom: 50px;
 
     .stat-group .number {
       margin-bottom: 10px;
@@ -136,16 +149,14 @@
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  padding-bottom: 40px;
 
   .community-title {
-    font-size: 24px;
     width: 100%;
     text-align: center;
   }
 
   .community-statement {
-    width: 550px;
+    width: 66%;
     text-align: center;
     margin-left: 20px;
     margin-right: 20px;
@@ -172,7 +183,6 @@
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  padding: 25px;
 
   .social-media-container {
     width: 100%;

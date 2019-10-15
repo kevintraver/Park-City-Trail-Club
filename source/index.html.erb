@@ -2,34 +2,9 @@
 title: Park City Trail Club
 ---
 
-<section class="sunday-run">
-  <h3 class="sunday-run-title">Upcoming Sunday Run</h3>
-  <div class="sunday-run-section">
-    <% run = dato.runs.reverse.detect{|run| run.date >= Date.today} %>
-    <% if run %>
-      <% link_to "/locations/#{run.location.slug}.html" do %>
-        <h4>
-          <%= run.date %>
-          <br>
-          <br>
-          <%= run.location.title %>
-        </h4>
-      <% end %>
-    <% else %>
-      <div>Check back soon! Runs are usually posted by Thursday</div>
-    <% end %>
-  </div>
-</section>
-
-<section class="meeting">
-  <h3 class="meeting-title">Where We Meet</h3>
-  <p class="meeting-location"><%= dato.main_page.meeting_information %></p>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.5545909592943!2d-111.5741982484278!3d40.74982537922633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8752697d1526be6f%3A0x82718b1830ff3434!2sBreakfast%20at%20Dana&#39;s!5e0!3m2!1sen!2sus!4v1571170940348!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-</section>
-
 <section class="mission">
   <h3 class="mission-title">Our Mission</h3>
-  <p class="mission-statement"><%= dato.main_page.mission %></p>
+  <div class="mission-statement"><%= dato.main_page.mission %></div>
 
   <div class="stats-container">
     <div class="team-stats mdl-grid">
@@ -57,11 +32,19 @@ title: Park City Trail Club
 
 <section class="community">
   <h3 class="community-title">Our Community</h3>
-  <p class="community-statement"><%= dato.main_page.community %></p>
+  <div class="community-statement"><%= markdown dato.main_page.community %></div>
   <div class="community-image-container">
     <div class="community-image">
       <%= image_tag 'https://www.datocms-assets.com/12570/1570917987-6529979024100582292281591296274434771910656n.jpg' %>
     </div>
+  </div>
+</section>
+
+<section class="meeting">
+  <h3 class="meeting-title">Where We Meet</h3>
+  <div class="meeting-location"><%= markdown dato.main_page.meeting_information %></div>
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.5545909592943!2d-111.5741982484278!3d40.74982537922633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8752697d1526be6f%3A0x82718b1830ff3434!2sBreakfast%20at%20Dana&#39;s!5e0!3m2!1sen!2sus!4v1571170940348!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
   </div>
 </section>
 
