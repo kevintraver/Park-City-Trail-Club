@@ -16,7 +16,7 @@ title: Park City Trail Club
       </div>
 
       <div class="stat-group mdl-cell mdl-cell--8-col-tablet mdl-cell--4-col-phone">
-        <h3 class="number"><%= dato.main_page.miles_of_trail %></h3>
+        <h3 class="number number-of-miles-run"></h3>
         <i class="material-icons">directions_run</i>
         <div class="stat-desc">Miles of Trail Run</div>
       </div>
@@ -58,6 +58,8 @@ title: Park City Trail Club
     var a = moment("2015-03-07");
     var b = moment();
     var numRuns = Math.abs(a.diff(b, 'weeks'));
+    var milesRun = 8*numRuns;
     $('.number-of-runs').text(numRuns);
+    $('.number-of-miles-run').text(milesRun);
   });
 </script>
